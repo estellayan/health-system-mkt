@@ -1,0 +1,32 @@
+{
+  "companyInfo": {
+    "name": "柏泉健康",
+    "slogan": "开启您的健康生活",
+    "description": "柏泉健康，为您提供全方位的精准健康管理服务。",
+    "year": "2026",
+    "rights": "版权所有"
+  },
+  "navLinks": [
+    { "text": "首页", "link": "#home" },
+    { "text": "关于我们", "link": "#about" },
+    { "text": "服务项目", "link": "#services" },
+    { "text": "联系我们", "link": "#contact" }
+  ],
+  "features": [
+    {
+      "id": "f1",
+      "title": "科学评估",
+      "description": "多维数据采集，构建精准健康画像。"
+    },
+    {
+      "id": "f2",
+      "title": "专业指导",
+      "description": "专家团队一对一制定个性化健康方案。"
+    },
+    {
+      "id": "f3",
+      "title": "持续跟踪",
+      "description": "全生命周期健康监测，实时动态预警。"
+    }
+  ]
+}
