@@ -1,47 +1,279 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>柏泉健康 - 专业健康管理</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="logo">柏泉健康</div>
-        <nav>
-            <ul>
-                <li>首页</li>
-                <li>关于我们</li>
-                <li>服务项目</li>
-                <li>联系我们</li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="hero">
-            <h1>开启您的健康生活</h1>
-            <p>柏泉健康，为您提供全方位的精准健康管理服务。</p>
-            <button class="cta">了解更多</button>
-        </section>
-        <section class="features">
-            <div class="feature">
-                <h3>科学评估</h3>
-                <p>多维数据采集，构建精准健康画像。</p>
-            </div>
-            <div class="feature">
-                <h3>专业指导</h3>
-                <p>专家团队一对一制定个性化健康方案。</p>
-            </div>
-            <div class="feature">
-                <h3>持续跟踪</h3>
-                <p>全生命周期健康监测，实时动态预警。</p>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 柏泉健康. 版权所有.</p>
-    </footer>
-    <script src="script.js"></script>
+<!DOCTYPE html> 
+<html lang="zh-CN"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>泊泉健康 | 由内而外的疗愈</title> 
+<script src="https://cdn.tailwindcss.com"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script> 
+<script src="https://unpkg.com/lucide@latest"></script> 
+<link rel="stylesheet" href="styles.css"> 
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+</head> 
+<body class="bg-[#FCF9F5] text-[#2D3436]"> 
+<!-- Navigation --> 
+<nav class="fixed w-full z-50 bg-white/70 backdrop-blur-md border-b border-orange-100/50"> 
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between"> 
+<div class="flex items-center gap-2"> 
+<div class="w-10 h-10 bg-[#FF8C42] rounded-full flex items-center justify-center shadow-lg shadow-orange-200"> 
+<i data-lucide="heart" class="text-white w-6 h-6"></i> 
+</div> 
+<span class="text-2xl font-bold tracking-tight text-[#2D3436]">泊泉<span class="text-[#FF8C42]">健康</span></span> 
+</div> 
+<div class="hidden md:flex items-center gap-10 font-medium text-gray-600"> 
+<a href="#about" class="hover:text-[#FF8C42] transition-colors">品牌愿景</a> 
+<a href="#pillars" class="hover:text-[#FF8C42] transition-colors">核心服务</a> 
+<a href="#experts" class="hover:text-[#FF8C42] transition-colors">专家团队</a> 
+<button class="bg-[#2D3436] text-white px-6 py-2.5 rounded-full hover:bg-[#FF8C42] transition-all duration-300">开启健康之旅</button> 
+</div> 
+</div> 
+</nav> 
+
+<!-- Hero Section --> 
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden"> 
+<div class="absolute top-0 right-0 w-1/2 h-full bg-[#FFE8D6]/30 -z-10 rounded-l-[100px] hidden lg:block"></div> 
+<div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center"> 
+<div class="hero-content"> 
+<span class="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-[#FF8C42] font-semibold text-sm mb-6">您的全息生活方式伙伴</span> 
+<h1 class="text-5xl lg:text-7xl font-bold leading-tight mb-8"> 
+由内<span class="text-gradient-orange">疗愈</span>，<br> 
+用心陪伴。 
+</h1> 
+<p class="text-xl text-gray-600 mb-10 leading-relaxed max-w-lg"> 
+我们通过身心的科学融合，恢复您生命本真的节奏。这不仅是一项服务，更是一段重返活力的旅程。 
+</p> 
+<div class="flex flex-wrap gap-4"> 
+<button class="px-8 py-4 bg-[#FF8C42] text-white rounded-2xl font-bold shadow-xl shadow-orange-200 hover:scale-105 transition-transform">探索干预方案</button> 
+<button class="px-8 py-4 bg-white border border-gray-200 rounded-2xl font-bold hover:bg-gray-50 transition-colors">咨询专家</button> 
+</div> 
+</div> 
+<div class="relative hero-image flex justify-center"> 
+<div class="relative w-full max-w-md"> 
+<img src="https://r2-bucket.flowith.net/f/8b564072bcd5f245/cute_stomach_mascot_character_index_0%404096x4096.jpeg" alt="胃部吉祥物" class="rounded-[40px] shadow-2xl animate-float"> 
+<div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-3xl shadow-xl flex items-center gap-4 border border-orange-50"> 
+<div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center"> 
+<i data-lucide="shield-check" class="text-blue-500"></i> 
+</div> 
+<div> 
+<p class="text-sm text-gray-400">检测准确率</p> 
+<p class="text-xl font-bold">92.4%</p> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+
+<!-- Brand Identity -->
+<section id="about" class="py-24 bg-white">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="space-y-6">
+<h2 class="text-4xl font-bold">全人<span class="text-[#3A86FF]">健康</span>体系</h2>
+<p class="text-lg text-gray-600 leading-relaxed">
+我们坚信，真正的健康不仅仅是没有疾病——而是肠道、大脑和生活方式之间的和谐共振。我们的使命是赋能每个人重新找回这种平衡。
+</p>
+<div class="grid grid-cols-2 gap-6 pt-6">
+<div class="p-4 rounded-2xl bg-[#FCF9F5]">
+<h4 class="font-bold text-[#FF8C42]">使命</h4>
+<p class="text-sm text-gray-500">通过科学的整合医学，赋能个体健康。</p>
+</div>
+<div class="p-4 rounded-2xl bg-[#FCF9F5]">
+<h4 class="font-bold text-[#3A86FF]">定位</h4>
+<p class="text-sm text-gray-500">您终身的全息健康管理伙伴。</p>
+</div>
+</div>
+</div>
+<div class="bg-gray-50 rounded-[40px] p-8 relative">
+<div class="aspect-video rounded-3xl overflow-hidden bg-gray-200 mb-6">
+
+<div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-orange-200 to-blue-200">
+<i data-lucide="play-circle" class="w-16 h-16 text-white cursor-pointer hover:scale-110 transition-transform"></i>
+</div>
+</div>
+<p class="text-center font-medium italic text-gray-500">“我们在冰冷的医学与模糊的养生之间，搭建了一座桥梁。”</p>
+</div>
+</div>
+</div>
+</section>
+
+
+<section id="pillars" class="py-24 bg-[#FCF9F5]">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold mb-4">核心生态系统</h2>
+<p class="text-gray-500">通过三大专业支柱，重塑您的生命活力基石。</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+
+<div class="pillar-card bg-white p-8 rounded-[32px] shadow-sm hover:shadow-xl transition-all border border-transparent hover:border-orange-100 group">
+<div class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-orange-500 transition-colors">
+<i data-lucide="leaf" class="text-[#FF8C42] group-hover:text-white"></i>
+</div>
+<h3 class="text-2xl font-bold mb-4">肠道健康</h3>
+<ul class="space-y-4 text-gray-600 mb-8">
+<li class="flex items-start gap-3">
+<i data-lucide="check-circle-2" class="w-5 h-5 text-orange-400 mt-1"></i>
+<span>45天专属调理营</span>
+</li>
+<li class="flex items-start gap-3">
+<i data-lucide="check-circle-2" class="w-5 h-5 text-orange-400 mt-1"></i>
+<span>精准微生态调节</span>
+</li>
+<li class="flex items-start gap-3">
+<i data-lucide="check-circle-2" class="w-5 h-5 text-orange-400 mt-1"></i>
+<span>中美双认证营养师跟进</span>
+</li>
+</ul>
+</div>
+
+<div class="pillar-card bg-white p-8 rounded-[32px] shadow-sm hover:shadow-xl transition-all border border-transparent hover:border-blue-100 group">
+<div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-500 transition-colors">
+<i data-lucide="brain" class="text-blue-500 group-hover:text-white"></i>
+</div>
+<h3 class="text-2xl font-bold mb-4">心理疗愈</h3>
+<ul class="space-y-4 text-gray-600 mb-8">
+<li class="flex items-start gap-3">
+<i data-lucide="check-circle-2" class="w-5 h-5 text-blue-400 mt-1"></i>
+<span>身心协同干预项目</span>
+</li>
+<li class="flex items-start gap-3">
+<i data-lucide="check-circle-2" class="w-5 h-5 text-blue-400 mt-1"></i>
+<span>北师大减压专家团队</span>
+</li>
+<li class="flex items-start gap-3">
+<i data-lucide="check-circle-2" class="w-5 h-5 text-blue-400 mt-1"></i>
+<span>情绪健康日记追踪</span>
+</li>
+</ul>
+</div>
+
+<div class="pillar-card bg-white p-8 rounded-[32px] shadow-sm hover:shadow-xl transition-all border border-transparent hover:border-teal-100 group">
+<div class="w-14 h-14 bg-teal-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-teal-500 transition-colors">
+<i data-lucide="activity" class="text-teal-500 group-hover:text-white"></i>
+</div>
+<h3 class="text-2xl font-bold mb-4">早筛与抗衰</h3>
+<ul class="space-y-4 text-gray-600 mb-8">
+<li class="flex items-start gap-3">
+<i data-lucide="check-circle-2" class="w-5 h-5 text-teal-400 mt-1"></i>
+<span>高达92%的检测准确率</span>
+</li>
+<li class="flex items-start gap-3">
+<i data-lucide="check-circle-2" class="w-5 h-5 text-teal-400 mt-1"></i>
+<span>5-10年健康风险预判</span>
+</li>
+<li class="flex items-start gap-3">
+<i data-lucide="check-circle-2" class="w-5 h-5 text-teal-400 mt-1"></i>
+<span>卒中与阿尔茨海默专项</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+
+<section id="experts" class="py-24 bg-white">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-xl">
+<h2 class="text-4xl font-bold mb-4">全球医学专家委员会</h2>
+<p class="text-gray-500 text-lg leading-relaxed">由全球顶尖医学机构背书，我们将临床级专业知识送到您的身边。</p>
+</div>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-orange-50 hover:border-orange-200"><i data-lucide="arrow-left" class="w-5 h-5"></i></button>
+<button class="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-orange-50 hover:border-orange-200"><i data-lucide="arrow-right" class="w-5 h-5"></i></button>
+</div>
+</div>
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="expert-profile text-center">
+<div class="w-32 h-32 bg-gray-100 rounded-full mx-auto mb-4 overflow-hidden border-4 border-white shadow-lg">
+<img src="https://api.dicebear.com/7.x/avataaars/svg?seed=PUMC" alt="协和专家">
+</div>
+<h4 class="font-bold">北京协和</h4>
+<p class="text-xs text-orange-500 font-medium uppercase tracking-widest">临床指导</p>
+</div>
+<div class="expert-profile text-center">
+<div class="w-32 h-32 bg-gray-100 rounded-full mx-auto mb-4 overflow-hidden border-4 border-white shadow-lg">
+<img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Xiangya" alt="湘雅专家">
+</div>
+<h4 class="font-bold">湘雅医院</h4>
+<p class="text-xs text-orange-500 font-medium uppercase tracking-widest">医学研究</p>
+</div>
+<div class="expert-profile text-center">
+<div class="w-32 h-32 bg-gray-100 rounded-full mx-auto mb-4 overflow-hidden border-4 border-white shadow-lg">
+<img src="https://api.dicebear.com/7.x/avataaars/svg?seed=BNU" alt="北师大专家">
+</div>
+<h4 class="font-bold">北师大专家</h4>
+<p class="text-xs text-orange-500 font-medium uppercase tracking-widest">心理学系</p>
+</div>
+<div class="expert-profile text-center">
+<div class="w-32 h-32 bg-gray-100 rounded-full mx-auto mb-4 overflow-hidden border-4 border-white shadow-lg">
+<img src="https://api.dicebear.com/7.x/avataaars/svg?seed=INT" alt="国际顾问">
+</div>
+<h4 class="font-bold">国际医学</h4>
+<p class="text-xs text-orange-500 font-medium uppercase tracking-widest">特聘顾问</p>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="py-24">
+<div class="max-w-7xl mx-auto px-6">
+<div class="bg-[#2D3436] rounded-[60px] p-12 lg:p-24 text-center text-white relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-orange-500/20 blur-[120px]"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/20 blur-[120px]"></div>
+<h2 class="text-4xl lg:text-5xl font-bold mb-8 relative z-10">今天起，开启您的健康之旅</h2>
+<p class="text-gray-400 text-lg mb-12 max-w-2xl mx-auto relative z-10">加入超过10,000名会员的行列，通过泊泉干预法重拾生命活力。</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4 relative z-10">
+<button class="bg-[#FF8C42] px-10 py-5 rounded-2xl font-bold text-lg hover:bg-orange-600 transition-colors">申请加入调理营</button>
+<button class="bg-white/10 backdrop-blur-md px-10 py-5 rounded-2xl font-bold text-lg hover:bg-white/20 transition-colors">免费健康咨询</button>
+</div>
+</div>
+</div>
+</section>
+
+<footer class="bg-white py-12 border-t border-gray-100">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-[#FF8C42] rounded-full flex items-center justify-center">
+<i data-lucide="heart" class="text-white w-4 h-4"></i>
+</div>
+<span class="text-xl font-bold">泊泉健康</span>
+</div>
+<p class="text-gray-400 text-sm">© 2026 泊泉健康. 科学整合，让生活更美好。</p>
+<div class="flex gap-6">
+<i data-lucide="instagram"></i>
+<i data-lucide="linkedin"></i>
+<i data-lucide="message-circle"></i>
+</div>
+</div>
+</footer>
+
+<script type="module" src="main.js"></script>
+<script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+    
+    // Simple GSAP animations for hero
+    gsap.from(".hero-content > *", {
+        opacity: 0,
+        y: 30,
+        duration: 1,
+        stagger: 0.2,
+        ease: "power3.out"
+    });
+    
+    gsap.from(".hero-image", {
+        opacity: 0,
+        scale: 0.9,
+        duration: 1.2,
+        delay: 0.5,
+        ease: "back.out(1.7)"
+    });
+</script>
 </body>
 </html>
