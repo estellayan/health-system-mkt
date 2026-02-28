@@ -1,1 +1,3 @@
-console.log("健康检查系统页面已加载");
+document.querySelector('.cta').addEventListener('click', function() {
+    alert('感谢关注柏泉健康，我们将竭诚为您服务！');
+});
