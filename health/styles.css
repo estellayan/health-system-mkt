@@ -1,0 +1,57 @@
+:root {
+    --primary-orange: #FF8C42;
+    --primary-blue: #3A86FF;
+    --bg-warm: #FCF9F5;
+    --text-dark: #2D3436;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+}
+
+.text-gradient-orange {
+    background: linear-gradient(135deg, #FF8C42 0%, #FFB482 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.pillar-card {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.pillar-card:hover {
+    transform: translateY(-10px);
+}
+
+nav.scrolled {
+    padding-block: 0.75rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.hero-image::after {
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(255,140,66,0.1) 0%, transparent 70%);
+    z-index: -1;
+}
+
+/* Custom transitions for Framer Motion-like feel */
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+}
